@@ -1,0 +1,33 @@
+{
+  "name": "webdsl",
+  "version": "0.1.0",
+  "description": "webdsl",
+  "main": "index.js",
+  "dependencies": {
+    "mocha": "2.2.5",
+    "webdriverio": "3.0.0"
+  },
+  "devDependencies": {
+    "forever": "0.14.2",
+    "selenium-standalone": "4.4.2",
+    "wait.for": "0.6.6"
+  },
+  "scripts": {
+    "postinstall": "selenium-standalone install",
+    "webdsl": "mocha",
+    "start": "npm run webdsl",
+    "pretest": "forever start standalone.js",
+    "test": "npm run webdsl",
+    "posttest": "forever stopall"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/gaboom/webdsl.git"
+  },
+  "author": "Gábor Czigola (https://github.com/gaboom)",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/gaboom/webdsl/issues"
+  },
+  "homepage": "https://github.com/gaboom/webdsl#readme"
+}
